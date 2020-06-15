@@ -1,0 +1,107 @@
+body {
+    background: grey;
+    --skew: 35deg;
+  }
+  
+  .browser {
+    width: 500px;
+    border: 5px #343642 solid;
+    position: relative;
+    border-radius: 8px;
+    height: 320px;
+    background: #fff;
+    margin: 50px auto;
+  }
+  .browser .columns {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    background: #1B2B34;
+    height: 40%;
+    border-bottom: 5px #343642 solid;
+  }
+  .browser .columns > div {
+    border: 5px #343642 solid;
+    border-width: 0 4px;
+    padding: 5px 10px;
+  }
+  .browser .columns > div span {
+    display: block;
+    background: #EC5F67;
+    height: 5px;
+    margin: 8px 0;
+    width: 0px;
+    border-radius: 8px;
+    transition: width 200ms;
+  }
+  .browser .columns > div.css span {
+    background: #96C594;
+  }
+  .browser .columns > div.js span {
+    background: #F3C362;
+  }
+  
+  .shadow {
+    top: 215px;
+    background: radial-gradient(rgba(0, 0, 0, 0.95) 0%, transparent 68%);
+    position: absolute;
+    left: 195px;
+    width: 110px;
+    height: 58px;
+    opacity: 0;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    transform-origin: 50% 65%;
+  }
+  .logo div {
+    opacity: 0;
+  }
+  
+  .cp-box {
+    border: 5px black solid;
+    height: 20px;
+    display: inline-block;
+    width: 35px;
+    position: relative;
+  }
+  
+  .top {
+    background: transparent;
+    width: 48px;
+    height: 48px;
+    transform: rotate(45deg) skew(-10deg, -10deg);
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    top: 46px;
+    left: -1px;
+  }
+  
+  .left-back, .left-front {
+    transform: skewY(calc(var(--skew) - (var(--skew) * 2)));
+  }
+  
+  .right-back, .right-front {
+    transform: skewY(var(--skew));
+  }
+  
+  .right-back, .left-front {
+    left: -4px;
+    border-left: 2px black solid;
+  }
+  
+  .left-front, .right-front {
+    top: -4px;
+  }
+  
+  .cplogo {
+    position: absolute;
+    top: 125px;
+    width: 80%;
+    margin-left: 10%;
+    opacity: 0;
+  }
